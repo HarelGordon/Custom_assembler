@@ -96,28 +96,6 @@ int check_comma(char *line, char *file_name, int line_number) {
         word = strtok(NULL, deli);  /* Get the next token */
     }
 
-    /* Check for label definition and apostrophes */
-/*     for (i = 0; i < strlen(line); i++) {
-        if (line[i] == ':') {
-            label_def_flag = 1;
-        }
-        if (line[i] == '"')
-            apostrophe++;
-        if ((line[i] == '"') && (apostrophe % 2 == 1)) {
-            while (isspace(line[i + 1])) {
-                i++;
-            }
-            if (line[i + 1] != '\0')
-                word_count++;
-        } else if ((!isspace(line[i])) && (isspace(line[i + 1]))) {
-            while (isspace(line[i + 1])) {
-                i++;
-            }
-            if (line[i + 1] != '\0')
-                word_count++;
-        }
-    } */
-
     /* Reset flags and counters for the next check */
     label_def_flag = word_count = apostrophe = dont_count_words_flag = count_non_blank_char = 0;
 
